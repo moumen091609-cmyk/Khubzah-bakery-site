@@ -1,0 +1,131 @@
+Page: Khubzah Bakery — Lebanese Trilingual Experience
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="view-transition" content="same-origin">
+  <meta name="description" content="Khubzah Bakery — A warm Lebanese bakery experience in Algeria.">
+  <title>KHUBZAH — خبزة | Lebanese Bakery in Algiers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&amp;family=Aref+Ruqaa:wght@400;700&amp;family=Cormorant+Garamond:wght@500;600;700&amp;family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html{scroll-behavior:smooth;background:#2b2b2b}
+    body{margin:0}
+    .font-arabic-display{font-family:'Aref Ruqaa',serif}
+    .font-arabic-body{font-family:'Almarai',sans-serif}
+    .font-english-display{font-family:'Cormorant Garamond',serif}
+    .font-english-body{font-family:'Jost',sans-serif}
+    .parallax-bg{background-attachment:fixed;background-position:center;background-size:cover}
+    .overlay-glass{background:rgba(43,43,43,.9);backdrop-filter:blur(12px)}
+    .hero-image{background-image:linear-gradient(rgba(43,43,43,.18),rgba(245,241,237,.78)),url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/clone-assets/e1c0ed7fa1fb5ee78a3308cd15aea53f247601d7d128c7daf0674fc4aedddebe.jpg')}
+    .reveal-in{opacity:0;transform:translateY(24px);transition:opacity .5s ease-out,transform .5s ease-out}
+    .reveal-in.active{opacity:1;transform:translateY(0)}
+    p{line-height:1.8}
+    .map-box{height:350px;background-image:linear-gradient(rgba(43,43,43,.2),rgba(43,43,43,.45)),url('https://maps.googleapis.com/maps/api/staticmap?center=Bordj+El+Bahri,Algiers&zoom=13&size=1200x500&maptype=roadmap');background-size:cover;background-position:center}
+    @media(min-width:768px){.map-box{height:450px}}
+    @view-transition{navigation:auto}
+    ::-webkit-scrollbar{display:none}
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-[#F5F1ED] text-[#2B2B2B]">
+    <header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 bg-[#2B2B2B] px-5 py-5 text-[#F5F1ED] md:px-10" dir="ltr">
+      <div class="font-english-body text-[10px] font-semibold tracking-[.35em]">KHUBZAH / ALGERIA</div>
+      <div class="font-arabic-display text-2xl" dir="rtl">خبزة</div>
+      <nav class="flex items-center gap-4 font-english-body text-[10px] tracking-[.16em]">
+        <a id="header-menu-link" href="#manakish" class="hidden border-b border-white/50 pb-1 transition-colors hover:border-white sm:block">MENU</a>
+        <div class="flex items-center gap-2 border-l border-white/20 pl-4" aria-label="Language selector">
+          <a id="language-en-link" href="#" class="text-[#D4B5A0]">EN</a><span>/</span>
+          <a id="language-fr-link" href="#" class="hover:text-[#D4B5A0]">FR</a><span>/</span>
+          <a id="language-ar-link" href="#" dir="rtl" class="hover:text-[#D4B5A0]">عربي</a>
+        </div>
+        <a id="header-order-link" href="#order" class="inline-flex items-center gap-2 border border-[#D4B5A0] px-3 py-2 text-[#D4B5A0] transition-colors hover:bg-[#D4B5A0] hover:text-[#2B2B2B]">ORDER NOW <iconify-icon icon="lucide:arrow-down-right"></iconify-icon></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-image parallax-bg relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20" aria-label="Khubzah introduction">
+        <div class="absolute inset-0 bg-[#D4B5A0]/20"></div>
+        <div class="relative z-10 flex w-full flex-col items-center justify-center text-center">
+          <h1 class="reveal-in active font-arabic-display text-[18vw] leading-none text-[#2B2B2B] md:text-[12vw]">خبزة</h1>
+          <div class="reveal-in active text-center font-english-display text-5xl font-semibold tracking-[.3em] text-[#2B2B2B]/85 md:text-7xl">KHUBZAH</div>
+          <div class="reveal-in active mt-10 flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
+            <div class="text-center md:text-right"><p class="font-arabic-body text-lg font-bold">تجربة خبز دافئة</p><p class="font-english-body text-xs tracking-[.2em] opacity-70">A WARM BAKERY EXPERIENCE</p></div>
+            <div class="hidden h-px w-12 bg-[#2B2B2B] md:block"></div>
+            <div class="text-center md:text-left"><p class="font-english-body text-xs tracking-[.25em]">AUTHENTIC LEBANESE</p><p class="font-arabic-body text-lg font-bold">المذاق الشامي الأصيل</p><p class="font-english-body text-xs opacity-70">Saveurs levantines authentiques</p></div>
+          </div>
+          <a id="hero-menu-link" href="#manakish" class="reveal-in active mt-12 inline-flex items-center gap-4 bg-[#2B2B2B] px-10 py-4 font-english-body text-xs tracking-[.16em] text-white transition-colors hover:bg-[#8B9D6F]">THE MENU <iconify-icon icon="lucide:arrow-down-right"></iconify-icon></a>
+        </div>
+      </section>
+
+      <section id="order" class="parallax-bg relative flex min-h-screen items-center justify-center bg-[#D4B5A0] px-6 py-24" style="background-image:linear-gradient(rgba(212,181,160,.72),rgba(245,241,237,.84)),url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/clone-assets/e1c0ed7fa1fb5ee78a3308cd15aea53f247601d7d128c7daf0674fc4aedddebe.jpg')">
+        <div class="reveal-in active overlay-glass w-full max-w-5xl p-8 text-center text-white md:p-16">
+          <p class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">ORDER / 00</p><h2 class="mt-4 font-arabic-display text-5xl md:text-7xl">طلب الآن</h2><p class="font-english-display text-4xl tracking-[.15em] text-white/60 md:text-6xl">ORDER NOW</p><p class="mt-2 font-english-body text-xs tracking-[.12em] text-white/55">Commander maintenant</p>
+          <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
+            <a id="order-call-link" href="tel:+21328690404" class="border border-white/20 p-7 text-right transition-colors hover:bg-[#D4B5A0] hover:text-[#2B2B2B]"><span class="font-arabic-body text-lg font-bold">اتصل الآن</span><span class="font-english-body text-xs tracking-[.12em]"> — CALL TO ORDER</span><span class="mt-2 block font-english-body text-xs text-white/60">Appeler pour commander</span><strong class="mt-4 block font-english-body text-2xl tracking-[.12em]">028.69.04.04</strong></a>
+            <a id="order-whatsapp-link" href="https://wa.me/213542152947" class="border border-[#D4B5A0] p-7 text-right text-[#D4B5A0] transition-colors hover:bg-[#D4B5A0] hover:text-[#2B2B2B]"><span class="font-arabic-body text-lg font-bold">اطلب واتساب</span><span class="font-english-body text-xs tracking-[.12em]"> — ORDER ON WHATSAPP</span><span class="mt-2 block font-english-body text-xs">Commander sur WhatsApp</span><strong class="mt-4 block font-english-body text-2xl tracking-[.12em]">0542.15.29.47</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="manakish" class="parallax-bg relative flex min-h-screen items-center justify-end px-6 py-20 md:px-24" style="background-image:url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/cf20041a-1580-446e-8d54-522b9cb2040e/1786891629450-fb4c8c50/khubzah-photo1-manakeesh.jpg')"><div class="absolute inset-0 bg-black/40"></div><div class="reveal-in active overlay-glass relative w-full max-w-xl p-8 text-white md:p-16"><span class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">SECTION 01</span><h2 class="mt-4 font-arabic-display text-6xl">منقوشة</h2><p class="font-english-display text-4xl tracking-[.18em] text-white/50">MANAKICH</p><p class="font-english-body text-xs tracking-[.18em] text-white/65">Manakich</p><div class="mt-10 space-y-7">
+        <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">منقوشة زعتر</h3><p class="font-english-body text-xs leading-relaxed text-white/65">Za'atar</p><p class="font-english-body text-xs leading-relaxed text-white/55">Za'atar</p></div><span>200 DA</span></div>
+        <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">منقوشة جبنة</h3><p class="font-english-body text-xs leading-relaxed text-white/65">Jibneh (cheese)</p><p class="font-english-body text-xs leading-relaxed text-white/55">Fromage</p></div><span>200 DA</span></div>
+        <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">منقوشة لحم بعجين</h3><p class="font-english-body text-xs leading-relaxed text-white/65">Lahm bil Ajeen</p><p class="font-english-body text-xs leading-relaxed text-white/55">Viande hachée</p></div><span>200 DA</span></div>
+      </div></div></section>
+
+      <section id="sides" class="parallax-bg relative flex min-h-screen items-center justify-start px-6 py-20 md:px-24" style="background-image:url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/cf20041a-1580-446e-8d54-522b9cb2040e/1786891640626-28eabb6e/khubzah-photo3-hummus-falafel-stock.jpg')"><div class="absolute inset-0 bg-black/35"></div><div class="reveal-in active overlay-glass relative w-full max-w-xl p-8 text-white md:p-16"><span class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">SECTION 02</span><h2 class="mt-4 font-arabic-display text-6xl">ميزة و سلطات</h2><p class="font-english-display text-4xl tracking-[.12em] text-white/50">SIDES &amp; SALADS</p><p class="font-english-body text-xs text-white/65">Accompagnements &amp; Salades</p><div class="mt-10 space-y-7">
+        <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">حمص بالتحينة</h3><p class="text-xs">Hummus</p><p class="text-xs text-white/55">Houmous</p></div><span>100 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">متبل باذنجان</h3><p class="text-xs">Mutabel</p><p class="text-xs text-white/55">Moutabal</p></div><span>100 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">لبنة</h3><p class="text-xs">Labneh</p><p class="text-xs text-white/55">Labné</p></div><span>100 DA</span></div>
+      </div></div></section>
+
+      <section id="sandwiches" class="parallax-bg relative flex min-h-screen items-center justify-end px-6 py-20 md:px-24" style="background-image:url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/cf20041a-1580-446e-8d54-522b9cb2040e/1786893130466-86287638/khubzah-photo4-falafel-sandwich.jpg')"><div class="absolute inset-0 bg-black/40"></div><div class="reveal-in active overlay-glass relative w-full max-w-xl p-8 text-white md:p-16"><span class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">SECTION 03</span><h2 class="mt-4 font-arabic-display text-5xl">ساندويتش و ميزة</h2><p class="font-english-display text-4xl tracking-[.12em] text-white/50">SANDWICHES &amp; MEZZE</p><p class="font-english-body text-xs text-white/65">Sandwichs &amp; Mezzé</p><div class="mt-10 space-y-7">
+        <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body text-sm font-bold">ساندويتش فلافل مع طرطور و سلطة</h3><p class="text-xs leading-relaxed text-white/65">Falafel Sandwich (with Tarrator &amp; Salad)</p><p class="text-xs leading-relaxed text-white/55">Sandwich Falafel (avec Tarator et Salade)</p></div><span>200 DA</span></div>
+        <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body text-sm font-bold">فلافل (حبة واحدة)</h3><p class="text-xs">Falafel (1 pc)</p><p class="text-xs text-white/55">Falafel (1 pièce)</p></div><span>60 DA</span></div>
+        <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body text-sm font-bold">صندوق فلافل (4 حبات، اختر حمص أو متبل أو لبنة)</h3><p class="text-xs leading-relaxed text-white/65">Falafel Box (4 pcs, choice of Hummus, Mutabel, or Labneh)</p><p class="text-xs leading-relaxed text-white/55">Boîte de Falafel (4 pièces)</p></div><span>300 DA</span></div>
+        <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body text-sm font-bold">كبة 150 (حبة واحدة)</h3><p class="text-xs">Kibbeh 150 (1 pc)</p><p class="text-xs text-white/55">Kebbé 150 (1 pièce)</p></div><span>150 DA</span></div>
+      </div></div></section>
+
+      <section id="drinks" class="parallax-bg relative flex min-h-screen items-center justify-start px-6 py-20 md:px-24" style="background-image:url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/cf20041a-1580-446e-8d54-522b9cb2040e/1786893139462-57e9633f/khubzah-photo5-kunafa.jpg')"><div class="absolute inset-0 bg-black/35"></div><div class="reveal-in active overlay-glass relative w-full max-w-xl p-8 text-white md:p-16"><span class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">SECTION 04</span><h2 class="mt-4 font-arabic-display text-5xl">مشروبات و حلويات</h2><p class="font-english-display text-4xl tracking-[.12em] text-white/50">DRINKS &amp; CAKES</p><p class="font-english-body text-xs text-white/65">Boissons &amp; Gâteaux</p><div class="mt-10 space-y-6">
+        <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">نسبريسو 13</h3><p class="text-xs">Nespresso 13</p><p class="text-xs text-white/55">Nespresso 13</p></div><span>250 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">شاي كرك</h3><p class="text-xs">Karak Tea</p><p class="text-xs text-white/55">Thé Karak</p></div><span>150 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">عصير الورد و الليمون</h3><p class="text-xs">Rose Lemonade</p><p class="text-xs text-white/55">Limonade à la rose</p></div><span>150 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">كيكة كرك</h3><p class="text-xs">Karak Cake</p><p class="text-xs text-white/55">Gâteau Karak</p></div><span>250 DA</span></div><div class="flex justify-between gap-4 border-b border-white/10 pb-4"><div><h3 class="font-arabic-body font-bold">عيران</h3><p class="text-xs">Ayran</p><p class="text-xs text-white/55">Ayran</p></div><span>100 DA</span></div>
+      </div></div></section>
+
+      <section id="location" class="relative flex min-h-screen items-center justify-center bg-[#D4B5A0] px-6 py-20"><div class="reveal-in active overlay-glass relative w-full max-w-5xl p-8 text-white md:p-16"><span class="font-english-body text-[10px] tracking-[.4em] text-[#8B9D6F]">FIND US / 05</span><h2 class="mt-4 font-arabic-display text-6xl">الموقع</h2><p class="font-english-display text-5xl tracking-[.15em] text-white/60">LOCATION</p><p class="font-english-body text-xs text-white/65">Emplacement / Nous trouver</p><div class="mt-10 grid gap-8 md:grid-cols-2"><div><h3 class="font-arabic-display text-3xl">خبزة</h3><p class="mt-3 font-english-body text-sm">Khubzah Bakery, 125 Brise Marine, Bordj El Bahri 16000, Algiers, Algeria</p><a id="location-map-link" href="https://maps.app.goo.gl/2qADECsUidZAL5us8" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex text-sm leading-relaxed text-[#D4B5A0] underline">125 Brise Marine, Bordj El Bahri 16000, Algiers, Algeria <iconify-icon icon="lucide:external-link" class="ml-2"></iconify-icon></a></div><div><p class="font-arabic-body font-bold">مفتوح يومياً</p><p class="mt-2 font-english-body text-sm">Open daily, 10:00 AM – 11:30 PM</p><p class="text-xs text-white/65">Ouvert tous les jours, 10h00 – 23h30</p></div></div><a id="location-map-box-link" href="https://maps.app.goo.gl/2qADECsUidZAL5us8" target="_blank" rel="noopener noreferrer" class="map-box mt-8 block h-[260px] w-full overflow-hidden border border-[#D4B5A0]/60 md:h-[320px]" aria-label="Open Khubzah Bakery in Google Maps"><iframe title="Khubzah Bakery location map" src="https://www.google.com/maps?q=125%20Brise%20Marine%2C%20Bordj%20El%20Bahri%2016000%2C%20Algiers%2C%20Algeria&output=embed" class="h-full w-full border-0" loading="lazy"></iframe></a></div></section>
+    </main>
+
+    <footer class="bg-[#2B2B2B] px-8 py-20 text-[#F5F1ED] md:px-24"><div class="reveal-in active grid gap-12 md:grid-cols-3"><div><h3 class="font-arabic-display text-5xl">خبزة</h3><p class="mt-5 font-english-body text-sm text-white/55">Lebanese flavours, fresh daily</p></div><div><p class="font-english-body text-[10px] tracking-[.3em] text-[#8B9D6F]">ORDER / CONTACT</p><a id="footer-call-link" href="tel:+21328690404" class="mt-4 block font-english-body text-sm">Call 028.69.04.04</a><a id="footer-whatsapp-link" href="https://wa.me/213542152947" class="mt-2 block font-english-body text-sm">WhatsApp 0542.15.29.47</a><a id="footer-order-link" href="#order" class="mt-6 inline-flex border border-[#D4B5A0] px-5 py-3 font-english-body text-xs tracking-[.15em] text-[#D4B5A0]">ORDER NOW</a></div><div><p class="font-english-body text-[10px] tracking-[.3em] text-[#8B9D6F]">SOCIAL</p><a id="footer-instagram-link" href="https://instagram.com/dr.khubzah" class="mt-4 flex items-center gap-2 font-english-body text-sm hover:text-[#D4B5A0]"><iconify-icon icon="mdi:instagram" class="text-lg"></iconify-icon>@dr.khubzah <span class="text-white/40">· 544 followers</span></a><a id="footer-threads-link" href="https://www.threads.net/@dr.khubzah" class="mt-3 flex items-center gap-2 font-english-body text-sm hover:text-[#D4B5A0]"><iconify-icon icon="lucide:at-sign" class="text-lg"></iconify-icon>@dr.khubzah on Threads</a></div></div><div class="reveal-in active mt-16 border-t border-white/10 pt-8 font-english-body text-[10px] tracking-[.18em] text-white/35">#KHUBZAH #ALGIERSBAKERY #MANAKICH #FALAFEL #KIBBEH</div></footer>
+  </div>
+  <script>
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal-in').forEach(el=>observer.observe(el));
+
+    const languageContent={
+      en:{menu:'MENU',order:'ORDER NOW',heroWarm:'A WARM BAKERY EXPERIENCE',heroSub:'AUTHENTIC LEBANESE',heroTaste:'Lebanese flavours, fresh daily',menuCta:'THE MENU',orderLabel:'ORDER / 00',orderTitle:'ORDER NOW',orderFrench:'Call to order',call:'CALL TO ORDER',whatsapp:'ORDER ON WHATSAPP',location:'LOCATION',locationName:'Khubzah Bakery, 125 Brise Marine, Bordj El Bahri 16000, Algiers, Algeria',hours:'Open daily, 10:00 AM – 11:30 PM',footer:'Lebanese flavours, fresh daily'},
+      fr:{menu:'MENU',order:'COMMANDER',heroWarm:'UNE EXPÉRIENCE BOULANGÈRE CHALEUREUSE',heroSub:'SAVEURS LIBANAISES AUTHENTIQUES',heroTaste:'Saveurs libanaises, fraîches chaque jour',menuCta:'LA CARTE',orderLabel:'COMMANDE / 00',orderTitle:'COMMANDER',orderFrench:'Appeler pour commander',call:'APPELER POUR COMMANDER',whatsapp:'COMMANDER SUR WHATSAPP',location:'EMPLACEMENT',locationName:'Boulangerie Khubzah, 125 Brise Marine, Bordj El Bahri 16000, Alger, Algérie',hours:'Ouvert tous les jours, 10h00 – 23h30',footer:'Saveurs libanaises, fraîches chaque jour'},
+      ar:{menu:'القائمة',order:'اطلب الآن',heroWarm:'تجربة مخبز دافئة',heroSub:'المذاق اللبناني الأصيل',heroTaste:'نكهات لبنانية طازجة يومياً',menuCta:'القائمة',orderLabel:'الطلب / 00',orderTitle:'اطلب الآن',orderFrench:'للطلب اتصل بنا',call:'اتصل للطلب',whatsapp:'اطلب عبر واتساب',location:'الموقع',locationName:'مخبز خبزة، 125 بريز مارين، برج البحري 16000، الجزائر، الجزائر',hours:'مفتوح يوميًا، 10:00 صباحًا – 11:30 مساءً',footer:'نكهات لبنانية طازجة يومياً'}
+    };
+    const menuItems={
+      en:[['Za\'atar','Jibneh (cheese)','Lahm bil Ajeen'],['Hummus','Mutabel','Labneh'],['Falafel Sandwich (with Tarrator & Salad)','Falafel (1 pc)','Falafel Box (4 pcs, choice of Hummus, Mutabel, or Labneh)','Kibbeh 150 (1 pc)'],['Nespresso 13','Karak Tea','Rose Lemonade','Karak Cake','Ayran']],
+      fr:[['Za\'atar','Fromage','Viande hachée'],['Houmous','Moutabal','Labné'],['Sandwich Falafel (avec Tarator et Salade)','Falafel (1 pièce)','Boîte de Falafel (4 pièces)','Kebbé 150 (1 pièce)'],['Nespresso 13','Thé Karak','Limonade à la rose','Gâteau Karak','Ayran']],
+      ar:[['منقوشة زعتر','منقوشة جبنة','منقوشة لحم بعجين'],['حمص بالطحينة','متبل باذنجان','لبنة'],['ساندويتش فلافل مع طرطور و سلطة','فلافل (حبة واحدة)','صندوق فلافل (4 حبات، اختر حمص أو متبل أو لبنة)','كبة 150 (حبة واحدة)'],['نسبريسو 13','شاي كرك','عصير الورد والليمون','كيكة كرك','عيران']]
+    };
+    const setText=(selector,text)=>{const el=document.querySelector(selector);if(el)el.textContent=text};
+    function setLanguage(lang){
+      const c=languageContent[lang];
+      document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+      setText('#header-menu-link',c.menu);setText('#header-order-link',c.order);setText('.hero-image .relative > div:nth-of-type(2) p:nth-of-type(2)',c.heroWarm);setText('.hero-image .relative > div:nth-of-type(2) > div:nth-of-type(3) p:first-child',c.heroSub);setText('.hero-image .relative > div:nth-of-type(2) > div:nth-of-type(3) p:last-child',c.heroTaste);setText('#hero-menu-link',c.menuCta);setText('#order > div > p:first-child',c.orderLabel);setText('#order h2',c.orderTitle);setText('#order-call-link span:nth-child(2)',` — ${c.call}`);setText('#order-whatsapp-link span:nth-child(2)',` — ${c.whatsapp}`);setText('#location .font-english-display',c.location);setText('#location .font-english-body.text-sm',c.locationName);setText('#location .mt-2.font-english-body',c.hours);setText('footer .font-english-body.text-sm',c.footer);
+      document.querySelectorAll('#manakish .flex.justify-between, #sides .flex.justify-between, #sandwiches .flex.justify-between, #drinks .flex.justify-between').forEach((item,index)=>{const section=item.closest('section').id;const sectionIndex=['manakish','sides','sandwiches','drinks'].indexOf(section);const names=menuItems[lang][sectionIndex];const pos=[...item.parentElement.children].indexOf(item);if(names&&names[pos]){const title=item.querySelector('h3');if(title){title.textContent=names[pos];title.dataset.lang=lang;}}});
+      document.querySelectorAll('[data-language]').forEach(btn=>{const active=btn.dataset.language===lang;btn.classList.toggle('text-[#D4B5A0]',active);btn.classList.toggle('border-[#D4B5A0]',active);btn.classList.toggle('border-transparent',!active)});
+    }
+    [['language-en-link','en'],['language-fr-link','fr'],['language-ar-link','ar']].forEach(([id,lang])=>{const el=document.getElementById(id);if(el){el.dataset.language=lang;el.addEventListener('click',event=>{event.preventDefault();setLanguage(lang)})}});
+    setLanguage('en');
+  </script>
+
+</body></html>
+```
+
+Please reference this design and implement it into our codebase; Try to understand the structure, which part of our codebase is relevant and implement
